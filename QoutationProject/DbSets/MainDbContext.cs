@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.IO;
 
 namespace QoutationProject.DbSets
 {
@@ -10,7 +11,8 @@ namespace QoutationProject.DbSets
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite(@"Data Source = " + Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + @"\Database.db");
+            string path = @$"Data Source = {Environment.CurrentDirectory}\Qoutation\Database.db";
+            optionsBuilder.UseSqlite(path);
             base.OnConfiguring(optionsBuilder);
         }
         public DbSet<Items> Items { get; set; }

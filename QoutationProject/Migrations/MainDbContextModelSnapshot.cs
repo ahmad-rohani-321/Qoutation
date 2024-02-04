@@ -29,6 +29,9 @@ namespace QoutationProject.Migrations
                     b.Property<DateOnly>("Date")
                         .HasColumnType("TEXT");
 
+                    b.Property<decimal>("DollarPrice")
+                        .HasColumnType("TEXT");
+
                     b.Property<decimal>("KaldarPrice")
                         .HasColumnType("TEXT");
 

@@ -117,4 +117,66 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="CurrencyPrice.IconOptions.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAGSAAAAEAIAAoDQAAFgAAACgAAAAZAAAAQAAAAAEAIAAAAAAAgAwAABEXAAARFwAAAAAAAAAA
+        AACstSQvrLUko6y1JM6stSTKrLUkQ6y1JACstSQfrLUkuKy1JM+stSTOrLUkzqy1JM6stSTOrLUkzqy1
+        JM6stSTOrLUkzqy1JM6stSTOrLUkzqy1JM6stSTOrLUkzqy1JNCstSS4rLUkvqy1JP+stST/rLUk/6y1
+        JF+stSQArLUkL6y1JO2stST/rLUk/6y1JP+stST/rLUk/6y1JP+stST/rLUk/6y1JP+stST/rLUk/6y1
+        JP+stST/rLUk/6y1JP+stSTzrLUkgqy1JPSstST/rLUk/6y1JP+stSRfrLUkAKy1JC+stSTtrLUk/6y1
+        JP+stST/rLUk/6y1JP+stST/rLUk/6y1JP+stST/rLUk/6y1JP+stST/rLUk/6y1JP+stST0rLUkc6y1
+        JAastST1rLUk/6y1JP+stST/rLUkX6y1JACstSQvrLUk7ay1JP+stST/rLUk/6y1JP+stST/rLUk/6y1
+        JP+stST/rLUk/6y1JP+stST/rLUk/6y1JP+stST1rLUkday1JAWstSQArLUk9ay1JP+stST/rLUk/6y1
+        JF+stSQArLUkL6y1JO2stST/rLUk/6y1JP6stSTCrLUkmay1JJistSSqrLUk9Ky1JP+stST/rLUk/6y1
+        JP+stST1rLUkd6y1JAastSQArLUkAay1JPWstST/rLUk/6y1JP+stSRfrLUkAKy1JC+stSTtrLUk/6y1
+        JP+stSSurLUkGay1JACstSQPrLUkmay1JPystST/rLUk/6y1JP+stST2rLUkeay1JAastSQArLUkL6y1
+        JI6stST1rLUk/6y1JP+stST/rLUkX6y1JACstSQvrLUk7ay1JP+stSSvrLUkGqy1JACstSQPrLUkmKy1
+        JPystST/rLUk/6y1JP+stST2rLUkeqy1JAastSQArLUkLKy1JMqstST3rLUk9ay1JP+stST/rLUk/6y1
+        JF+stSQArLUkL6y1JO2stSSyrLUkG6y1JACstSQPrLUklqy1JPystST/rLUk/6y1JP+stST2rLUkfKy1
+        JAestSQArLUkK6y1JMestST/rLUk9ay1JPWstST/rLUk/6y1JP+stSRfrLUkAKy1JBystSSBrLUkHqy1
+        JACstSQOrLUklay1JPystST/rLUk/6y1JP+stST3rLUkfay1JAestSQArLUkKqy1JMastST/rLUk/6y1
+        JPWstST2rLUk/6y1JP+stST/rLUkgKy1JAGstSQArLUkAay1JACstSQNrLUkk6y1JPystST/rLUk/6y1
+        JP+stST3rLUkf6y1JAestSQArLUkKay1JMWstST/rLUk/6y1JP+stST1rLUk8qy1JP+stST/rLUk/6y1
+        JO6stSRkrLUkAqy1JACstSQNrLUkkqy1JPustST/rLUk/6y1JP+stST4rLUkgay1JAistSQArLUkKKy1
+        JMOstST/rLUk/6y1JP+stST/rLUk2ay1JK+stST+rLUk/6y1JP+stST/rLUk7qy1JGGstSQOrLUkkKy1
+        JPustST/rLUk/6y1JP+stST4rLUkgqy1JAistSQArLUkJ6y1JMKstST/rLUk/6y1JP+stST/rLUk4qy1
+        JFOstSQerLUkr6y1JP+stST/rLUk/6y1JP+stSTqrLUkuay1JPistST/rLUk/6y1JP+stST4rLUkhKy1
+        JAmstSQArLUkJqy1JMGstST/rLUk/6y1JP+stST/rLUk5Ky1JE6stSQArLUkAKy1JBystSSyrLUk/6y1
+        JP+stST/rLUk/6y1JP+stST/rLUk/6y1JP+stST5rLUkhqy1JAmstSQArLUkJay1JL+stST/rLUk/6y1
+        JP+stST/rLUk5ay1JFCstSQArLUkAKy1JACstSQArLUkHay1JLOstST/rLUk/6y1JP+stST/rLUk/6y1
+        JP+stST5rLUkh6y1JAqstSQArLUkDKy1JK6stST/rLUk/6y1JP+stST/rLUk5ay1JFKstSQArLUkAAAA
+        AAAAAAAAAAAAAKy1JACstSQqrLUk3ay1JP+stST/rLUk/6y1JP+stST/rLUks6y1JA2stSQArLUkAKy1
+        JCmstSTorLUk/6y1JP+stST/rLUk/ay1JHGstSQArLUkAAAAAAAAAAAAAAAAAKy1JACstSQKrLUkhqy1
+        JPistST/rLUk/6y1JP+stST/rLUk/6y1JOmstSRZrLUkAay1JACstSQXrLUkzKy1JP+stST/rLUk/6y1
+        JP+stSTDrLUkKay1JACstSQAAAAAAKy1JACstSQJrLUkhqy1JPmstST/rLUk/6y1JP+stST/rLUk/6y1
+        JP+stST/rLUk6qy1JFmstSQBrLUkAKy1JEastSTgrLUk/6y1JP+stST/rLUk/6y1JMSstSQorLUkAKy1
+        JACstSQKrLUkg6y1JPmstST/rLUk/6y1JP+stST4rLUk4ay1JP2stST/rLUk/6y1JP+stSTprLUkV6y1
+        JAGstSQArLUkSay1JOGstST/rLUk/6y1JP+stST/rLUkwqy1JCestSQArLUkhqy1JPestST/rLUk/6y1
+        JP+stST7rLUkjqy1JC2stSS6rLUk/6y1JP+stST/rLUk/6y1JOistSRVrLUkAKy1JACstSRKrLUk4qy1
+        JP+stST/rLUk/6y1JP+stSTArLUkK6y1JOustST/rLUk/6y1JP+stST7rLUkkay1JA2stSQArLUkIqy1
+        JLystST/rLUk/6y1JP+stST/rLUk56y1JFSstSQArLUkAKy1JEystSTirLUk/6y1JP+stST/rLUk/6y1
+        JL6stST2rLUk/6y1JP+stST/rLUknqy1JA2stSQArLUkAKy1JACstSQjrLUkvay1JP+stST/rLUk/6y1
+        JP+stSTmrLUkUqy1JACstSQArLUkTay1JOOstST/rLUk/6y1JP+stST0rLUk9ay1JP+stST/rLUk/6y1
+        JF+stSQArLUkEay1JEustSQMrLUkAKy1JCSstSS/rLUk/6y1JP+stST/rLUk/6y1JOastSRRrLUkAKy1
+        JACstSROrLUk5Ky1JP+stST/rLUk9ay1JPWstST/rLUk/6y1JP+stSRfrLUkAKy1JC+stSTmrLUkhqy1
+        JAmstSQArLUkJay1JMCstST/rLUk/6y1JP+stST/rLUk5ay1JFCstSQArLUkAKy1JFCstSTlrLUk/6y1
+        JPWstST1rLUk/6y1JP+stST/rLUkX6y1JACstSQvrLUk7qy1JPmstSSDrLUkCay1JACstSQmrLUkway1
+        JP+stST/rLUk/6y1JP+stSTkrLUkTqy1JACstSQArLUkUay1JOestST3rLUk9ay1JP+stST/rLUk/6y1
+        JF+stSQArLUkL6y1JO2stST/rLUk+Ky1JIKstSQIrLUkAKy1JCestSTDrLUk/6y1JP+stST/rLUk/6y1
+        JOOstSRNrLUkAKy1JACstSRVrLUkxKy1JPWstST/rLUk/6y1JP+stSSXrLUkVKy1JHistSTzrLUk/6y1
+        JP+stST3rLUkgKy1JAistSQArLUkKKy1JMSstST/rLUk/6y1JP+stST/rLUk4qy1JEustSQArLUkAqy1
+        JBKstST1rLUk/6y1JP+stST/rLUk/qy1JP2stST9rLUk/6y1JP+stST/rLUk/6y1JPestSR+rLUkB6y1
+        JACstSQqrLUkxay1JP+stST/rLUk/6y1JP+stSThrLUkSqy1JACstSQArLUk9ay1JP+stST/rLUk/6y1
+        JP+stST/rLUk/6y1JP+stST/rLUk/6y1JP+stST/rLUk96y1JH2stSQHrLUkAKy1JCustSTHrLUk/6y1
+        JP+stST/rLUk/6y1JOCstSRIrLUkAKy1JNqstST/rLUk/6y1JP+stST/rLUk/6y1JP+stST/rLUk/6y1
+        JP+stST/rLUk/6y1JP+stST3rLUkfay1JAestSQArLUkLKy1JMistST/rLUk/6y1JP+stST/rLUk36y1
+        JFKstSRQrLUkxqy1JOCstSTgrLUk4Ky1JOCstSTgrLUk4Ky1JOCstSTgrLUk4Ky1JOCstSTgrLUk4qy1
+        JNGstSQwrLUkAKy1JACstSQsrLUksqy1JOCstSTgrLUk4Ky1JOKstSTBrLUkAay1JBSstSQlrLUkJay1
+        JCWstSQlrLUkJay1JCWstSQlrLUkJay1JCWstSQlrLUkJay1JCWstSQjrLUkCKy1JACstSQArLUkAKy1
+        JA2stSQkrLUkJay1JCWstSQlrLUkIAQAAAAEAAAABAAAAAQAAIAEAAEABAgCAAQQBAAEIAgABEAQAAKA
+        IAABAEAAAACAAAABAICAAgGAwAQDgOAMB4DABAOAgAIBgAABAIAAAYAAAQDAAAOAYAAEQDAABCAYAAQQ
+        DAAECAYAAAQCAAACAYAAAQCAAACAAAAAwAAAAOAA
+</value>
+  </data>
 </root>

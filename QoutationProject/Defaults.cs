@@ -13,5 +13,9 @@ namespace QoutationProject
         {
             XtraMessageBox.Show(message, "خبرتیا", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+        internal static DialogResult YesNoMessageBox(string message)
+        {
+            return XtraMessageBox.Show(message, "پوښتنه", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+        }
     }
 }

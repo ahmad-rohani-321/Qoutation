@@ -1,15 +1,4 @@
 ﻿using DevExpress.XtraEditors;
-using QoutationProject.Actions;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
 namespace QoutationProject
 {
     public partial class CurrencyPrice : XtraForm
@@ -30,6 +19,7 @@ namespace QoutationProject
                 {
                     AghaniPrice = TxtDollarToAfghani.Value,
                     KaldarPrice = TxtDollarToKaldar.Value,
+                    DollarPrice = TxtYenToDollar.Value,
                     Date = DateOnly.FromDateTime(DateTime.Now)
                 };
                 bool added = currencyPrices.AddCurrencyPrices(currencyPrice);

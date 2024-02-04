@@ -2,7 +2,7 @@
 
 namespace QoutationProject.DbSets
 {
-    internal class Items
+    public class Items
     {
         [Key]
         public int Id { get; set; }
