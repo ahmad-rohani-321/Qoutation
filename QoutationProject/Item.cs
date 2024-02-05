@@ -88,7 +88,7 @@ namespace QoutationProject
         private bool Valid()
         {
             bool result = true;
-            if (TxtItemName.Text.Length <= 0)
+            if (TxtItemName.Text.Length < 0)
             {
                 TxtItemName.ErrorText = "د جنس نوم ورسوئ";
                 result = false;
@@ -97,7 +97,7 @@ namespace QoutationProject
             {
                 TxtItemName.ErrorText = default!;
             }
-            if (TxtPurchasePrice.Value <= 0)
+            if (TxtPurchasePrice.Value < 0)
             {
                 TxtPurchasePrice.ErrorText = "قیمت تر صفر مه کموئ";
                 result = false;
@@ -115,7 +115,7 @@ namespace QoutationProject
             {
                 TxtPercentage.ErrorText = default!;
             }
-            if (TxtDollarPrice.Value < 1)
+            if (TxtDollarPrice.Value < 0)
             {
                 TxtDollarPrice.ErrorText = "قیمت تر صفر مه کموئ";
                 result = false;
@@ -138,8 +138,8 @@ namespace QoutationProject
         }
         private void calculatePurchase()
         {
-            TxtFinalPrice.Value = TxtPurchasePrice.Value + ((TxtPercentage.Value * TxtPurchasePrice.Value) / 100);
-            TxtDollarPrice.Value = TxtFinalPrice.Value / _currencyPrice.DollarPrice;
+            TxtFinalPrice.Value = Math.Round((TxtPurchasePrice.Value + ((TxtPercentage.Value * TxtPurchasePrice.Value) / 100)), 3);
+            TxtDollarPrice.Value = Math.Round((TxtFinalPrice.Value / _currencyPrice.DollarPrice), 3);
         }
 
         private void TxtDollarPrice_EditValueChanged(object sender, EventArgs e)
@@ -149,8 +149,8 @@ namespace QoutationProject
 
         private void calculateCurrencyPrice()
         {
-            TxtAfghaniPrice.Value = TxtDollarPrice.Value * _currencyPrice.AghaniPrice;
-            TxtKaldarPrice.Value = TxtDollarPrice.Value * _currencyPrice.KaldarPrice;
+            TxtAfghaniPrice.Value = Math.Round((TxtDollarPrice.Value * _currencyPrice.AghaniPrice), 3);
+            TxtKaldarPrice.Value = Math.Round((TxtDollarPrice.Value * _currencyPrice.KaldarPrice), 3);
         }
     }
 }

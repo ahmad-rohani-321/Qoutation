@@ -89,47 +89,47 @@
             layoutControl1.Name = "layoutControl1";
             layoutControl1.OptionsView.RightToLeftMirroringApplied = true;
             layoutControl1.Root = Root;
-            layoutControl1.Size = new Size(575, 471);
+            layoutControl1.Size = new Size(575, 509);
             layoutControl1.TabIndex = 0;
             layoutControl1.Text = "layoutControl1";
             // 
             // TxtFinalPrice
             // 
             TxtFinalPrice.EditValue = new decimal(new int[] { 0, 0, 0, 0 });
-            TxtFinalPrice.Location = new Point(16, 208);
+            TxtFinalPrice.Location = new Point(16, 224);
             TxtFinalPrice.Name = "TxtFinalPrice";
             TxtFinalPrice.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
-            TxtFinalPrice.Size = new Size(368, 42);
+            TxtFinalPrice.Size = new Size(337, 46);
             TxtFinalPrice.StyleController = layoutControl1;
             TxtFinalPrice.TabIndex = 16;
             // 
             // TxtKaldarPrice
             // 
             TxtKaldarPrice.EditValue = new decimal(new int[] { 0, 0, 0, 0 });
-            TxtKaldarPrice.Location = new Point(16, 352);
+            TxtKaldarPrice.Location = new Point(16, 380);
             TxtKaldarPrice.Name = "TxtKaldarPrice";
             TxtKaldarPrice.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
-            TxtKaldarPrice.Size = new Size(368, 42);
+            TxtKaldarPrice.Size = new Size(337, 46);
             TxtKaldarPrice.StyleController = layoutControl1;
             TxtKaldarPrice.TabIndex = 15;
             // 
             // TxtAfghaniPrice
             // 
             TxtAfghaniPrice.EditValue = new decimal(new int[] { 0, 0, 0, 0 });
-            TxtAfghaniPrice.Location = new Point(16, 304);
+            TxtAfghaniPrice.Location = new Point(16, 328);
             TxtAfghaniPrice.Name = "TxtAfghaniPrice";
             TxtAfghaniPrice.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
-            TxtAfghaniPrice.Size = new Size(368, 42);
+            TxtAfghaniPrice.Size = new Size(337, 46);
             TxtAfghaniPrice.StyleController = layoutControl1;
             TxtAfghaniPrice.TabIndex = 14;
             // 
             // TxtDollarPrice
             // 
             TxtDollarPrice.EditValue = new decimal(new int[] { 0, 0, 0, 0 });
-            TxtDollarPrice.Location = new Point(16, 256);
+            TxtDollarPrice.Location = new Point(16, 276);
             TxtDollarPrice.Name = "TxtDollarPrice";
             TxtDollarPrice.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
-            TxtDollarPrice.Size = new Size(368, 42);
+            TxtDollarPrice.Size = new Size(337, 46);
             TxtDollarPrice.StyleController = layoutControl1;
             TxtDollarPrice.TabIndex = 13;
             TxtDollarPrice.EditValueChanged += TxtDollarPrice_EditValueChanged;
@@ -137,10 +137,10 @@
             // TxtPercentage
             // 
             TxtPercentage.EditValue = new decimal(new int[] { 0, 0, 0, 0 });
-            TxtPercentage.Location = new Point(16, 160);
+            TxtPercentage.Location = new Point(16, 172);
             TxtPercentage.Name = "TxtPercentage";
             TxtPercentage.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
-            TxtPercentage.Size = new Size(368, 42);
+            TxtPercentage.Size = new Size(337, 46);
             TxtPercentage.StyleController = layoutControl1;
             TxtPercentage.TabIndex = 11;
             TxtPercentage.EditValueChanged += TxtPercentage_EditValueChanged;
@@ -148,19 +148,19 @@
             // TxtPurchasePrice
             // 
             TxtPurchasePrice.EditValue = new decimal(new int[] { 0, 0, 0, 0 });
-            TxtPurchasePrice.Location = new Point(16, 112);
+            TxtPurchasePrice.Location = new Point(16, 120);
             TxtPurchasePrice.Name = "TxtPurchasePrice";
             TxtPurchasePrice.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
-            TxtPurchasePrice.Size = new Size(368, 42);
+            TxtPurchasePrice.Size = new Size(337, 46);
             TxtPurchasePrice.StyleController = layoutControl1;
             TxtPurchasePrice.TabIndex = 10;
             TxtPurchasePrice.EditValueChanged += TxtPurchasePrice_EditValueChanged;
             // 
             // btnSave
             // 
-            btnSave.Location = new Point(16, 421);
+            btnSave.Location = new Point(16, 458);
             btnSave.Name = "btnSave";
-            btnSave.Size = new Size(543, 34);
+            btnSave.Size = new Size(543, 35);
             btnSave.StyleController = layoutControl1;
             btnSave.TabIndex = 9;
             btnSave.Text = "ثبت";
@@ -173,15 +173,15 @@
             TxtId.Location = new Point(16, 16);
             TxtId.Name = "TxtId";
             TxtId.Properties.ReadOnly = true;
-            TxtId.Size = new Size(368, 42);
+            TxtId.Size = new Size(337, 46);
             TxtId.StyleController = layoutControl1;
             TxtId.TabIndex = 0;
             // 
             // TxtItemName
             // 
-            TxtItemName.Location = new Point(16, 64);
+            TxtItemName.Location = new Point(16, 68);
             TxtItemName.Name = "TxtItemName";
-            TxtItemName.Size = new Size(368, 42);
+            TxtItemName.Size = new Size(337, 46);
             TxtItemName.StyleController = layoutControl1;
             TxtItemName.TabIndex = 2;
             // 
@@ -191,102 +191,102 @@
             Root.GroupBordersVisible = false;
             Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { layoutControlItem1, layoutControlItem8, layoutControlItem9, emptySpaceItem1, layoutControlItem2, layoutControlItem3, layoutControlItem5, layoutControlItem6, layoutControlItem7, layoutControlItem4 });
             Root.Name = "Root";
-            Root.Size = new Size(575, 471);
+            Root.Size = new Size(575, 509);
             Root.TextVisible = false;
             // 
             // layoutControlItem1
             // 
             layoutControlItem1.Control = TxtItemName;
-            layoutControlItem1.Location = new Point(0, 48);
+            layoutControlItem1.Location = new Point(0, 52);
             layoutControlItem1.Name = "layoutControlItem1";
-            layoutControlItem1.Size = new Size(549, 48);
+            layoutControlItem1.Size = new Size(549, 52);
             layoutControlItem1.Text = "جنس نوم";
-            layoutControlItem1.TextSize = new Size(159, 24);
+            layoutControlItem1.TextSize = new Size(190, 28);
             // 
             // layoutControlItem8
             // 
             layoutControlItem8.Control = TxtId;
             layoutControlItem8.Location = new Point(0, 0);
             layoutControlItem8.Name = "layoutControlItem8";
-            layoutControlItem8.Size = new Size(549, 48);
+            layoutControlItem8.Size = new Size(549, 52);
             layoutControlItem8.Text = "شمېره";
-            layoutControlItem8.TextSize = new Size(159, 24);
+            layoutControlItem8.TextSize = new Size(190, 28);
             // 
             // layoutControlItem9
             // 
             layoutControlItem9.Control = btnSave;
-            layoutControlItem9.Location = new Point(0, 405);
+            layoutControlItem9.Location = new Point(0, 442);
             layoutControlItem9.Name = "layoutControlItem9";
-            layoutControlItem9.Size = new Size(549, 40);
+            layoutControlItem9.Size = new Size(549, 41);
             layoutControlItem9.TextSize = new Size(0, 0);
             layoutControlItem9.TextVisible = false;
             // 
             // emptySpaceItem1
             // 
             emptySpaceItem1.AllowHotTrack = false;
-            emptySpaceItem1.Location = new Point(0, 384);
+            emptySpaceItem1.Location = new Point(0, 416);
             emptySpaceItem1.Name = "emptySpaceItem1";
-            emptySpaceItem1.Size = new Size(549, 21);
+            emptySpaceItem1.Size = new Size(549, 26);
             emptySpaceItem1.TextSize = new Size(0, 0);
             // 
             // layoutControlItem2
             // 
             layoutControlItem2.Control = TxtPurchasePrice;
-            layoutControlItem2.Location = new Point(0, 96);
+            layoutControlItem2.Location = new Point(0, 104);
             layoutControlItem2.Name = "layoutControlItem2";
-            layoutControlItem2.Size = new Size(549, 48);
+            layoutControlItem2.Size = new Size(549, 52);
             layoutControlItem2.Text = "خرید قیمت";
-            layoutControlItem2.TextSize = new Size(159, 24);
+            layoutControlItem2.TextSize = new Size(190, 28);
             // 
             // layoutControlItem3
             // 
             layoutControlItem3.Control = TxtPercentage;
-            layoutControlItem3.Location = new Point(0, 144);
+            layoutControlItem3.Location = new Point(0, 156);
             layoutControlItem3.Name = "layoutControlItem3";
-            layoutControlItem3.Size = new Size(549, 48);
+            layoutControlItem3.Size = new Size(549, 52);
             layoutControlItem3.Text = "مصرف او د ګټي فیصدي";
-            layoutControlItem3.TextSize = new Size(159, 24);
+            layoutControlItem3.TextSize = new Size(190, 28);
             // 
             // layoutControlItem5
             // 
             layoutControlItem5.Control = TxtDollarPrice;
-            layoutControlItem5.Location = new Point(0, 240);
+            layoutControlItem5.Location = new Point(0, 260);
             layoutControlItem5.Name = "layoutControlItem5";
-            layoutControlItem5.Size = new Size(549, 48);
+            layoutControlItem5.Size = new Size(549, 52);
             layoutControlItem5.Text = "ډالر قیمت";
-            layoutControlItem5.TextSize = new Size(159, 24);
+            layoutControlItem5.TextSize = new Size(190, 28);
             // 
             // layoutControlItem6
             // 
             layoutControlItem6.Control = TxtAfghaniPrice;
-            layoutControlItem6.Location = new Point(0, 288);
+            layoutControlItem6.Location = new Point(0, 312);
             layoutControlItem6.Name = "layoutControlItem6";
-            layoutControlItem6.Size = new Size(549, 48);
+            layoutControlItem6.Size = new Size(549, 52);
             layoutControlItem6.Text = "افغانۍ قیمت";
-            layoutControlItem6.TextSize = new Size(159, 24);
+            layoutControlItem6.TextSize = new Size(190, 28);
             // 
             // layoutControlItem7
             // 
             layoutControlItem7.Control = TxtKaldarPrice;
-            layoutControlItem7.Location = new Point(0, 336);
+            layoutControlItem7.Location = new Point(0, 364);
             layoutControlItem7.Name = "layoutControlItem7";
-            layoutControlItem7.Size = new Size(549, 48);
+            layoutControlItem7.Size = new Size(549, 52);
             layoutControlItem7.Text = "کلدار قیمت";
-            layoutControlItem7.TextSize = new Size(159, 24);
+            layoutControlItem7.TextSize = new Size(190, 28);
             // 
             // layoutControlItem4
             // 
             layoutControlItem4.Control = TxtFinalPrice;
-            layoutControlItem4.Location = new Point(0, 192);
+            layoutControlItem4.Location = new Point(0, 208);
             layoutControlItem4.Name = "layoutControlItem4";
-            layoutControlItem4.Size = new Size(549, 48);
-            layoutControlItem4.Text = "د خرید تمام شد قیمت";
-            layoutControlItem4.TextSize = new Size(159, 24);
+            layoutControlItem4.Size = new Size(549, 52);
+            layoutControlItem4.Text = "د خرید تمام شد قیمت ین";
+            layoutControlItem4.TextSize = new Size(190, 28);
             // 
             // Item
             // 
             AutoScaleMode = AutoScaleMode.None;
-            ClientSize = new Size(575, 471);
+            ClientSize = new Size(575, 509);
             Controls.Add(layoutControl1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             IconOptions.Icon = (Icon)resources.GetObject("Item.IconOptions.Icon");
