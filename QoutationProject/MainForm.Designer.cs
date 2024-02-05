@@ -118,7 +118,7 @@
             btnPrint.Size = new Size(210, 34);
             btnPrint.StyleController = layoutControl1;
             btnPrint.TabIndex = 4;
-            btnPrint.Text = "ایکسیل";
+            btnPrint.Text = "چاپ";
             btnPrint.Click += btnPrint_Click;
             // 
             // btnEditPrice
@@ -335,7 +335,6 @@
             AutoScaleMode = AutoScaleMode.None;
             ClientSize = new Size(1358, 640);
             Controls.Add(layoutControl1);
-            Font = new Font("Calibri", 12F);
             IconOptions.Icon = (Icon)resources.GetObject("MainForm.IconOptions.Icon");
             IconOptions.Image = (Image)resources.GetObject("MainForm.IconOptions.Image");
             Name = "MainForm";

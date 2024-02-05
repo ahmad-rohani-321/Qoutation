@@ -1,4 +1,5 @@
 ﻿using DevExpress.Mvvm.Native;
+using DevExpress.XtraReports.UI;
 
 namespace QoutationProject
 {
@@ -52,13 +53,19 @@ namespace QoutationProject
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            SaveFileDialog fileDialog = new();
+            /*SaveFileDialog fileDialog = new();
             fileDialog.Filter = "Excel files (*.xlsx)|*.xlsx";
             if (fileDialog.ShowDialog() == DialogResult.OK)
             {
                 viewItems.ExportToXlsx(fileDialog.FileName);
             }
-            fileDialog.Dispose();
+            fileDialog.Dispose();*/
+            PrintItems print = new();
+            print.DataSource = gridItems.DataSource;
+            print.CreateDocument();
+            ReportPrintTool tool = new(print);
+            tool.ShowPreviewDialog();
+            tool.Dispose();
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
