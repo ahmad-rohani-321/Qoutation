@@ -17,6 +17,9 @@ namespace QoutationProject
         {
             InitializeComponent();
             _item = item;
+            Actions.CurrencyPrices cur = new Actions.CurrencyPrices();
+            _currencyPrice = cur.GetLastCurrencyPrice;
+            cur.Dispose();
             TxtId.EditValue = _item.Id;
             TxtItemName.Text = _item.ItemName;
             TxtPurchasePrice.Value = _item.PurchasePrice;
@@ -135,7 +138,8 @@ namespace QoutationProject
         }
         private void calculatePurchase()
         {
-            TxtFinalPrice.Value = TxtPurchasePrice.Value + ((TxtPercentage.Value * TxtPurchasePrice.Value) / 100) * _currencyPrice.DollarPrice;
+            TxtFinalPrice.Value = TxtPurchasePrice.Value + ((TxtPercentage.Value * TxtPurchasePrice.Value) / 100);
+            TxtDollarPrice.Value = TxtFinalPrice.Value / _currencyPrice.DollarPrice;
         }
 
         private void TxtDollarPrice_EditValueChanged(object sender, EventArgs e)

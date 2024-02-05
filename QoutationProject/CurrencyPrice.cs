@@ -1,9 +1,11 @@
 ﻿using DevExpress.XtraEditors;
+using DevExpress.XtraSpreadsheet.Forms;
 namespace QoutationProject
 {
     public partial class CurrencyPrice : XtraForm
     {
-        Actions.CurrencyPrices currencyPrices;
+        private readonly Actions.CurrencyPrices currencyPrices;
+        private int Id = 0;
         public CurrencyPrice()
         {
             InitializeComponent();
@@ -15,23 +17,46 @@ namespace QoutationProject
         {
             if (Valid())
             {
-                DbSets.CurrencyPrice currencyPrice = new DbSets.CurrencyPrice()
+                if (Id == 0)
                 {
-                    AghaniPrice = TxtDollarToAfghani.Value,
-                    KaldarPrice = TxtDollarToKaldar.Value,
-                    DollarPrice = TxtYenToDollar.Value,
-                    Date = DateOnly.FromDateTime(DateTime.Now)
-                };
-                bool added = currencyPrices.AddCurrencyPrices(currencyPrice);
-                if (added)
-                {
-                    Defaults.MessageBox("عملیه تکمیل سوه");
-                    gridCurrency.DataSource = currencyPrices.GetCurrencyPrices;
+                    DbSets.CurrencyPrice currencyPrice = new DbSets.CurrencyPrice()
+                    {
+                        AghaniPrice = TxtDollarToAfghani.Value,
+                        KaldarPrice = TxtDollarToKaldar.Value,
+                        DollarPrice = TxtYenToDollar.Value,
+                        Date = DateOnly.FromDateTime(DateTime.Now)
+                    };
+                    bool added = currencyPrices.AddCurrencyPrices(currencyPrice);
+                    if (added)
+                    {
+                        Defaults.MessageBox("عملیه تکمیل سوه");
+                        gridCurrency.DataSource = currencyPrices.GetCurrencyPrices;
 
+                    }
+                    else
+                    {
+                        Defaults.MessageBox("عملیه تکمیل نه سوه");
+                    }
                 }
                 else
                 {
-                    Defaults.MessageBox("عملیه تکمیل نه سوه");
+                    DbSets.CurrencyPrice currencyPrice = new DbSets.CurrencyPrice()
+                    {
+                        Id = Id,
+                        AghaniPrice = TxtDollarToAfghani.Value,
+                        KaldarPrice = TxtDollarToKaldar.Value,
+                        DollarPrice = TxtYenToDollar.Value
+                    };
+                    bool update = currencyPrices.Update(currencyPrice);
+                    if (update)
+                    {
+                        Defaults.MessageBox("عملیه تکمیل سوه");
+                        gridCurrency.DataSource = currencyPrices.GetCurrencyPrices;
+                    }
+                    else
+                    {
+                        Defaults.MessageBox("عملیه تکمیل نه سوه");
+                    }
                 }
             }
         }
@@ -58,6 +83,17 @@ namespace QoutationProject
                 TxtDollarToKaldar.ErrorText = default!;
             }
             return result;
+        }
+        private void gridCurrency_DoubleClick(object sender, EventArgs e)
+        {
+            if (viewCurrency.SelectedRowsCount > 0)
+            {
+                DbSets.CurrencyPrice currency = (DbSets.CurrencyPrice)viewCurrency.GetFocusedRow();
+                Id = currency.Id;
+                TxtDollarToAfghani.Value = currency.AghaniPrice;
+                TxtDollarToKaldar.Value = currency.KaldarPrice;
+                TxtYenToDollar.Value = currency.DollarPrice;
+            }
         }
     }
 }

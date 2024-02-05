@@ -35,7 +35,7 @@ namespace QoutationProject
             if (viewItems.SelectedRowsCount == 1)
             {
                 DbSets.Items item = (DbSets.Items)viewItems.GetFocusedRow();
-                Item i = new Item();
+                Item i = new Item(item);
                 i.ShowDialog();
                 i.Dispose();
                 Actions.Items items = new();
@@ -73,22 +73,6 @@ namespace QoutationProject
             gridItems.DataSource = item.GetItems;
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            if (viewItems.SelectedRowsCount > 0)
-            {
-                if (Defaults.YesNoMessageBox("غواړي جنس ډیلیټ کړئ") == DialogResult.Yes)
-                {
-                    Actions.Items item = new();
-                    if (item.Delete((int)viewItems.GetFocusedRowCellValue("Id")))
-                    {
-                        gridItems.DataSource = item.GetItems;
-                    }
-                    item.Dispose();
-                }
-            }
-        }
-
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (Defaults.YesNoMessageBox("غواړئ فورم بند کړئ") == DialogResult.Yes)
@@ -106,6 +90,31 @@ namespace QoutationProject
             ResetDatabase d = new ResetDatabase();
             d.ShowDialog();
             d.Dispose();
+        }
+        private void btnItemDelete_Click(object sender, EventArgs e)
+        {
+            if (viewItems.SelectedRowsCount > 0)
+            {
+                if (Defaults.YesNoMessageBox("غواړي جنس ډیلیټ کړئ") == DialogResult.Yes)
+                {
+                    Actions.Items item = new();
+                    if (item.Delete((int)viewItems.GetFocusedRowCellValue("Id")))
+                    {
+                        gridItems.DataSource = item.GetItems;
+                        gridItems.RefreshDataSource();
+                        gridItems.Refresh();
+                    }
+                    item.Dispose();
+                }
+            }
+        }
+
+        private void btnRefreshPage_Click(object sender, EventArgs e)
+        {
+            Actions.Items item = new();
+            gridItems.DataSource = item.GetItems;
+            gridItems.RefreshDataSource();
+            gridItems.Refresh();
         }
     }
 }

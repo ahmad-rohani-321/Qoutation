@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            btnItemDelete = new DevExpress.XtraEditors.SimpleButton();
             btnResetDatabase = new DevExpress.XtraEditors.SimpleButton();
             pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             btnPrint = new DevExpress.XtraEditors.SimpleButton();
@@ -55,6 +56,9 @@
             layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            btnRefreshPage = new DevExpress.XtraEditors.SimpleButton();
+            layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)layoutControl1).BeginInit();
             layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureEdit1.Properties).BeginInit();
@@ -69,10 +73,14 @@
             ((System.ComponentModel.ISupportInitialize)layoutControlItem5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)emptySpaceItem1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)layoutControlItem6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)layoutControlItem7).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)layoutControlItem9).BeginInit();
             SuspendLayout();
             // 
             // layoutControl1
             // 
+            layoutControl1.Controls.Add(btnRefreshPage);
+            layoutControl1.Controls.Add(btnItemDelete);
             layoutControl1.Controls.Add(btnResetDatabase);
             layoutControl1.Controls.Add(pictureEdit1);
             layoutControl1.Controls.Add(btnPrint);
@@ -85,15 +93,25 @@
             layoutControl1.Name = "layoutControl1";
             layoutControl1.OptionsView.RightToLeftMirroringApplied = true;
             layoutControl1.Root = Root;
-            layoutControl1.Size = new Size(1358, 640);
+            layoutControl1.Size = new Size(1358, 638);
             layoutControl1.TabIndex = 0;
             layoutControl1.Text = "layoutControl1";
             // 
+            // btnItemDelete
+            // 
+            btnItemDelete.Location = new Point(1082, 176);
+            btnItemDelete.Name = "btnItemDelete";
+            btnItemDelete.Size = new Size(131, 34);
+            btnItemDelete.StyleController = layoutControl1;
+            btnItemDelete.TabIndex = 7;
+            btnItemDelete.Text = "جنس ډیلیټ";
+            btnItemDelete.Click += btnItemDelete_Click;
+            // 
             // btnResetDatabase
             // 
-            btnResetDatabase.Location = new Point(1132, 16);
+            btnResetDatabase.Location = new Point(1082, 16);
             btnResetDatabase.Name = "btnResetDatabase";
-            btnResetDatabase.Size = new Size(210, 34);
+            btnResetDatabase.Size = new Size(260, 34);
             btnResetDatabase.StyleController = layoutControl1;
             btnResetDatabase.TabIndex = 6;
             btnResetDatabase.Text = "ډاټابېس";
@@ -103,19 +121,18 @@
             // 
             pictureEdit1.EditValue = resources.GetObject("pictureEdit1.EditValue");
             pictureEdit1.Location = new Point(16, 16);
-            pictureEdit1.MaximumSize = new Size(317, 157);
             pictureEdit1.Name = "pictureEdit1";
             pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
-            pictureEdit1.Size = new Size(316, 157);
+            pictureEdit1.Size = new Size(299, 194);
             pictureEdit1.StyleController = layoutControl1;
             pictureEdit1.TabIndex = 1;
             // 
             // btnPrint
             // 
-            btnPrint.Location = new Point(1132, 176);
+            btnPrint.Location = new Point(1219, 176);
             btnPrint.Name = "btnPrint";
-            btnPrint.Size = new Size(210, 34);
+            btnPrint.Size = new Size(123, 34);
             btnPrint.StyleController = layoutControl1;
             btnPrint.TabIndex = 4;
             btnPrint.Text = "چاپ";
@@ -123,9 +140,9 @@
             // 
             // btnEditPrice
             // 
-            btnEditPrice.Location = new Point(1132, 136);
+            btnEditPrice.Location = new Point(1219, 136);
             btnEditPrice.Name = "btnEditPrice";
-            btnEditPrice.Size = new Size(210, 34);
+            btnEditPrice.Size = new Size(123, 34);
             btnEditPrice.StyleController = layoutControl1;
             btnEditPrice.TabIndex = 3;
             btnEditPrice.Text = "د اسعارو روز نرخ";
@@ -133,9 +150,9 @@
             // 
             // btnEditItem
             // 
-            btnEditItem.Location = new Point(1132, 96);
+            btnEditItem.Location = new Point(1082, 96);
             btnEditItem.Name = "btnEditItem";
-            btnEditItem.Size = new Size(210, 34);
+            btnEditItem.Size = new Size(260, 34);
             btnEditItem.StyleController = layoutControl1;
             btnEditItem.TabIndex = 2;
             btnEditItem.Text = "تغیر جنس";
@@ -143,9 +160,9 @@
             // 
             // btnNewItem
             // 
-            btnNewItem.Location = new Point(1132, 56);
+            btnNewItem.Location = new Point(1082, 56);
             btnNewItem.Name = "btnNewItem";
-            btnNewItem.Size = new Size(210, 34);
+            btnNewItem.Size = new Size(260, 34);
             btnNewItem.StyleController = layoutControl1;
             btnNewItem.TabIndex = 0;
             btnNewItem.Text = "نوی جنس";
@@ -156,7 +173,7 @@
             gridItems.Location = new Point(16, 216);
             gridItems.MainView = viewItems;
             gridItems.Name = "gridItems";
-            gridItems.Size = new Size(1326, 408);
+            gridItems.Size = new Size(1326, 406);
             gridItems.TabIndex = 5;
             gridItems.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { viewItems });
             // 
@@ -251,9 +268,9 @@
             // 
             Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             Root.GroupBordersVisible = false;
-            Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { layoutControlItem1, layoutControlItem8, layoutControlItem2, layoutControlItem3, layoutControlItem4, layoutControlItem5, emptySpaceItem1, layoutControlItem6 });
+            Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { layoutControlItem1, layoutControlItem8, layoutControlItem2, layoutControlItem3, layoutControlItem4, layoutControlItem5, emptySpaceItem1, layoutControlItem6, layoutControlItem7, layoutControlItem9 });
             Root.Name = "Root";
-            Root.Size = new Size(1358, 640);
+            Root.Size = new Size(1358, 638);
             Root.TextVisible = false;
             // 
             // layoutControlItem1
@@ -261,7 +278,7 @@
             layoutControlItem1.Control = gridItems;
             layoutControlItem1.Location = new Point(0, 200);
             layoutControlItem1.Name = "layoutControlItem1";
-            layoutControlItem1.Size = new Size(1332, 414);
+            layoutControlItem1.Size = new Size(1332, 412);
             layoutControlItem1.TextSize = new Size(0, 0);
             layoutControlItem1.TextVisible = false;
             // 
@@ -271,7 +288,7 @@
             layoutControlItem8.Location = new Point(0, 0);
             layoutControlItem8.MinSize = new Size(26, 26);
             layoutControlItem8.Name = "layoutControlItem8";
-            layoutControlItem8.Size = new Size(322, 200);
+            layoutControlItem8.Size = new Size(305, 200);
             layoutControlItem8.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             layoutControlItem8.TextSize = new Size(0, 0);
             layoutControlItem8.TextVisible = false;
@@ -279,61 +296,89 @@
             // layoutControlItem2
             // 
             layoutControlItem2.Control = btnNewItem;
-            layoutControlItem2.Location = new Point(1116, 40);
+            layoutControlItem2.Location = new Point(1066, 40);
             layoutControlItem2.Name = "layoutControlItem2";
-            layoutControlItem2.Size = new Size(216, 40);
+            layoutControlItem2.Size = new Size(266, 40);
             layoutControlItem2.TextSize = new Size(0, 0);
             layoutControlItem2.TextVisible = false;
             // 
             // layoutControlItem3
             // 
             layoutControlItem3.Control = btnEditItem;
-            layoutControlItem3.Location = new Point(1116, 80);
+            layoutControlItem3.Location = new Point(1066, 80);
             layoutControlItem3.Name = "layoutControlItem3";
-            layoutControlItem3.Size = new Size(216, 40);
+            layoutControlItem3.Size = new Size(266, 40);
             layoutControlItem3.TextSize = new Size(0, 0);
             layoutControlItem3.TextVisible = false;
             // 
             // layoutControlItem4
             // 
             layoutControlItem4.Control = btnEditPrice;
-            layoutControlItem4.Location = new Point(1116, 120);
+            layoutControlItem4.Location = new Point(1203, 120);
             layoutControlItem4.Name = "layoutControlItem4";
-            layoutControlItem4.Size = new Size(216, 40);
+            layoutControlItem4.Size = new Size(129, 40);
             layoutControlItem4.TextSize = new Size(0, 0);
             layoutControlItem4.TextVisible = false;
             // 
             // layoutControlItem5
             // 
             layoutControlItem5.Control = btnPrint;
-            layoutControlItem5.Location = new Point(1116, 160);
+            layoutControlItem5.Location = new Point(1203, 160);
             layoutControlItem5.Name = "layoutControlItem5";
-            layoutControlItem5.Size = new Size(216, 40);
+            layoutControlItem5.Size = new Size(129, 40);
             layoutControlItem5.TextSize = new Size(0, 0);
             layoutControlItem5.TextVisible = false;
             // 
             // emptySpaceItem1
             // 
             emptySpaceItem1.AllowHotTrack = false;
-            emptySpaceItem1.Location = new Point(322, 0);
+            emptySpaceItem1.Location = new Point(305, 0);
             emptySpaceItem1.Name = "emptySpaceItem1";
-            emptySpaceItem1.Size = new Size(794, 200);
+            emptySpaceItem1.Size = new Size(761, 200);
             emptySpaceItem1.TextSize = new Size(0, 0);
             // 
             // layoutControlItem6
             // 
             layoutControlItem6.Control = btnResetDatabase;
-            layoutControlItem6.Location = new Point(1116, 0);
+            layoutControlItem6.Location = new Point(1066, 0);
             layoutControlItem6.Name = "layoutControlItem6";
-            layoutControlItem6.Size = new Size(216, 40);
+            layoutControlItem6.Size = new Size(266, 40);
             layoutControlItem6.TextSize = new Size(0, 0);
             layoutControlItem6.TextVisible = false;
+            // 
+            // layoutControlItem7
+            // 
+            layoutControlItem7.Control = btnItemDelete;
+            layoutControlItem7.Location = new Point(1066, 160);
+            layoutControlItem7.Name = "layoutControlItem7";
+            layoutControlItem7.Size = new Size(137, 40);
+            layoutControlItem7.TextSize = new Size(0, 0);
+            layoutControlItem7.TextVisible = false;
+            // 
+            // btnRefreshPage
+            // 
+            btnRefreshPage.Location = new Point(1082, 136);
+            btnRefreshPage.Name = "btnRefreshPage";
+            btnRefreshPage.Size = new Size(131, 34);
+            btnRefreshPage.StyleController = layoutControl1;
+            btnRefreshPage.TabIndex = 8;
+            btnRefreshPage.Text = "صفحه تازه کول";
+            btnRefreshPage.Click += btnRefreshPage_Click;
+            // 
+            // layoutControlItem9
+            // 
+            layoutControlItem9.Control = btnRefreshPage;
+            layoutControlItem9.Location = new Point(1066, 120);
+            layoutControlItem9.Name = "layoutControlItem9";
+            layoutControlItem9.Size = new Size(137, 40);
+            layoutControlItem9.TextSize = new Size(0, 0);
+            layoutControlItem9.TextVisible = false;
             // 
             // MainForm
             // 
             Appearance.Options.UseFont = true;
             AutoScaleMode = AutoScaleMode.None;
-            ClientSize = new Size(1358, 640);
+            ClientSize = new Size(1358, 638);
             Controls.Add(layoutControl1);
             IconOptions.Icon = (Icon)resources.GetObject("MainForm.IconOptions.Icon");
             IconOptions.Image = (Image)resources.GetObject("MainForm.IconOptions.Image");
@@ -358,6 +403,8 @@
             ((System.ComponentModel.ISupportInitialize)layoutControlItem5).EndInit();
             ((System.ComponentModel.ISupportInitialize)emptySpaceItem1).EndInit();
             ((System.ComponentModel.ISupportInitialize)layoutControlItem6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)layoutControlItem7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)layoutControlItem9).EndInit();
             ResumeLayout(false);
         }
 
@@ -389,5 +436,9 @@
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraEditors.SimpleButton btnResetDatabase;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        private DevExpress.XtraEditors.SimpleButton btnItemDelete;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
+        private DevExpress.XtraEditors.SimpleButton btnRefreshPage;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
     }
 }

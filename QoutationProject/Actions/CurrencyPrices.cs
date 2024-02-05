@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using QoutationProject.DbSets;
 namespace QoutationProject.Actions
 {
     internal class CurrencyPrices : IDisposable
@@ -70,6 +71,26 @@ namespace QoutationProject.Actions
                 catch { return default!; }
                 finally { db.Database.CloseConnection(); }
             }
+        }
+        internal bool Update(DbSets.CurrencyPrice currency)
+        {
+            try
+            {
+                DbSets.CurrencyPrice price = db.CurrencyPrices.SingleOrDefault(x => x.Id == currency.Id);
+                price.DollarPrice = currency.DollarPrice;
+                price.AghaniPrice = currency.AghaniPrice;
+                price.KaldarPrice = currency.KaldarPrice;
+
+                db.Items.ExecuteUpdate(x => x
+                    .SetProperty(y => y.DollarPrice, d => d.FinalPrice / price.DollarPrice)
+                    .SetProperty(y => y.AfghaniPrice, a => a.DollarPrice * price.AghaniPrice)
+                    .SetProperty(y => y.KaldarPrice, k => k.DollarPrice * price.KaldarPrice));
+
+                db.SaveChanges();
+                return true;
+            }
+            catch { return false; }
+            finally { db.Database.CloseConnection(); }
         }
         public void Dispose()
         {

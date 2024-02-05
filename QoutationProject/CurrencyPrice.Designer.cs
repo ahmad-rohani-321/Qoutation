@@ -74,7 +74,7 @@
             layoutControl1.Name = "layoutControl1";
             layoutControl1.OptionsView.RightToLeftMirroringApplied = true;
             layoutControl1.Root = Root;
-            layoutControl1.Size = new Size(1013, 418);
+            layoutControl1.Size = new Size(1013, 416);
             layoutControl1.TabIndex = 0;
             layoutControl1.Text = "layoutControl1";
             // 
@@ -113,9 +113,10 @@
             gridCurrency.Location = new Point(16, 16);
             gridCurrency.MainView = viewCurrency;
             gridCurrency.Name = "gridCurrency";
-            gridCurrency.Size = new Size(609, 386);
+            gridCurrency.Size = new Size(609, 384);
             gridCurrency.TabIndex = 4;
             gridCurrency.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { viewCurrency });
+            gridCurrency.DoubleClick += gridCurrency_DoubleClick;
             // 
             // viewCurrency
             // 
@@ -191,7 +192,7 @@
             Root.GroupBordersVisible = false;
             Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { layoutControlItem3, layoutControlItem4, layoutControlItem1, layoutControlItem2, layoutControlItem5 });
             Root.Name = "Root";
-            Root.Size = new Size(1013, 418);
+            Root.Size = new Size(1013, 416);
             Root.TextVisible = false;
             // 
             // layoutControlItem3
@@ -199,7 +200,7 @@
             layoutControlItem3.Control = btnSave;
             layoutControlItem3.Location = new Point(615, 144);
             layoutControlItem3.Name = "layoutControlItem3";
-            layoutControlItem3.Size = new Size(372, 248);
+            layoutControlItem3.Size = new Size(372, 246);
             layoutControlItem3.TextSize = new Size(0, 0);
             layoutControlItem3.TextVisible = false;
             // 
@@ -208,7 +209,7 @@
             layoutControlItem4.Control = gridCurrency;
             layoutControlItem4.Location = new Point(0, 0);
             layoutControlItem4.Name = "layoutControlItem4";
-            layoutControlItem4.Size = new Size(615, 392);
+            layoutControlItem4.Size = new Size(615, 390);
             layoutControlItem4.TextSize = new Size(0, 0);
             layoutControlItem4.TextVisible = false;
             // 
@@ -247,7 +248,7 @@
             // 
             Appearance.Options.UseFont = true;
             AutoScaleMode = AutoScaleMode.None;
-            ClientSize = new Size(1013, 418);
+            ClientSize = new Size(1013, 416);
             Controls.Add(layoutControl1);
             Font = new Font("Calibri", 12F);
             FormBorderStyle = FormBorderStyle.FixedSingle;
