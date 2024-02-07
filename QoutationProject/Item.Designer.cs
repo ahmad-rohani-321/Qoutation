@@ -50,6 +50,7 @@
             layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)layoutControl1).BeginInit();
             layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)TxtFinalPrice.Properties).BeginInit();
@@ -71,6 +72,7 @@
             ((System.ComponentModel.ISupportInitialize)layoutControlItem6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)layoutControlItem7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)layoutControlItem4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)emptySpaceItem2).BeginInit();
             SuspendLayout();
             // 
             // layoutControl1
@@ -101,7 +103,7 @@
             TxtFinalPrice.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
             TxtFinalPrice.Size = new Size(337, 46);
             TxtFinalPrice.StyleController = layoutControl1;
-            TxtFinalPrice.TabIndex = 16;
+            TxtFinalPrice.TabIndex = 5;
             // 
             // TxtKaldarPrice
             // 
@@ -111,7 +113,7 @@
             TxtKaldarPrice.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
             TxtKaldarPrice.Size = new Size(337, 46);
             TxtKaldarPrice.StyleController = layoutControl1;
-            TxtKaldarPrice.TabIndex = 15;
+            TxtKaldarPrice.TabIndex = 8;
             // 
             // TxtAfghaniPrice
             // 
@@ -121,7 +123,7 @@
             TxtAfghaniPrice.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
             TxtAfghaniPrice.Size = new Size(337, 46);
             TxtAfghaniPrice.StyleController = layoutControl1;
-            TxtAfghaniPrice.TabIndex = 14;
+            TxtAfghaniPrice.TabIndex = 7;
             // 
             // TxtDollarPrice
             // 
@@ -131,7 +133,7 @@
             TxtDollarPrice.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
             TxtDollarPrice.Size = new Size(337, 46);
             TxtDollarPrice.StyleController = layoutControl1;
-            TxtDollarPrice.TabIndex = 13;
+            TxtDollarPrice.TabIndex = 6;
             TxtDollarPrice.EditValueChanged += TxtDollarPrice_EditValueChanged;
             // 
             // TxtPercentage
@@ -142,7 +144,7 @@
             TxtPercentage.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
             TxtPercentage.Size = new Size(337, 46);
             TxtPercentage.StyleController = layoutControl1;
-            TxtPercentage.TabIndex = 11;
+            TxtPercentage.TabIndex = 4;
             TxtPercentage.EditValueChanged += TxtPercentage_EditValueChanged;
             // 
             // TxtPurchasePrice
@@ -153,12 +155,12 @@
             TxtPurchasePrice.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
             TxtPurchasePrice.Size = new Size(337, 46);
             TxtPurchasePrice.StyleController = layoutControl1;
-            TxtPurchasePrice.TabIndex = 10;
+            TxtPurchasePrice.TabIndex = 3;
             TxtPurchasePrice.EditValueChanged += TxtPurchasePrice_EditValueChanged;
             // 
             // btnSave
             // 
-            btnSave.Location = new Point(16, 458);
+            btnSave.Location = new Point(16, 445);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(543, 35);
             btnSave.StyleController = layoutControl1;
@@ -189,7 +191,7 @@
             // 
             Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             Root.GroupBordersVisible = false;
-            Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { layoutControlItem1, layoutControlItem8, layoutControlItem9, emptySpaceItem1, layoutControlItem2, layoutControlItem3, layoutControlItem5, layoutControlItem6, layoutControlItem7, layoutControlItem4 });
+            Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { layoutControlItem1, layoutControlItem8, layoutControlItem9, layoutControlItem2, layoutControlItem3, layoutControlItem5, layoutControlItem6, layoutControlItem7, layoutControlItem4, emptySpaceItem1, emptySpaceItem2 });
             Root.Name = "Root";
             Root.Size = new Size(575, 509);
             Root.TextVisible = false;
@@ -215,7 +217,7 @@
             // layoutControlItem9
             // 
             layoutControlItem9.Control = btnSave;
-            layoutControlItem9.Location = new Point(0, 442);
+            layoutControlItem9.Location = new Point(0, 429);
             layoutControlItem9.Name = "layoutControlItem9";
             layoutControlItem9.Size = new Size(549, 41);
             layoutControlItem9.TextSize = new Size(0, 0);
@@ -226,7 +228,7 @@
             emptySpaceItem1.AllowHotTrack = false;
             emptySpaceItem1.Location = new Point(0, 416);
             emptySpaceItem1.Name = "emptySpaceItem1";
-            emptySpaceItem1.Size = new Size(549, 26);
+            emptySpaceItem1.Size = new Size(549, 13);
             emptySpaceItem1.TextSize = new Size(0, 0);
             // 
             // layoutControlItem2
@@ -283,6 +285,14 @@
             layoutControlItem4.Text = "د خرید تمام شد قیمت ین";
             layoutControlItem4.TextSize = new Size(190, 28);
             // 
+            // emptySpaceItem2
+            // 
+            emptySpaceItem2.AllowHotTrack = false;
+            emptySpaceItem2.Location = new Point(0, 470);
+            emptySpaceItem2.Name = "emptySpaceItem2";
+            emptySpaceItem2.Size = new Size(549, 13);
+            emptySpaceItem2.TextSize = new Size(0, 0);
+            // 
             // Item
             // 
             AutoScaleMode = AutoScaleMode.None;
@@ -318,6 +328,7 @@
             ((System.ComponentModel.ISupportInitialize)layoutControlItem6).EndInit();
             ((System.ComponentModel.ISupportInitialize)layoutControlItem7).EndInit();
             ((System.ComponentModel.ISupportInitialize)layoutControlItem4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)emptySpaceItem2).EndInit();
             ResumeLayout(false);
         }
 
@@ -344,5 +355,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
         private DevExpress.XtraEditors.SpinEdit TxtFinalPrice;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
     }
 }

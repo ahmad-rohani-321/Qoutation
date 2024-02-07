@@ -106,7 +106,7 @@ namespace QoutationProject
             {
                 TxtPurchasePrice.ErrorText = default!;
             }
-            if (TxtPercentage.Value < 1 || TxtPercentage.Value > 100)
+            if (TxtPercentage.Value < 0 || TxtPercentage.Value > 100)
             {
                 TxtPercentage.ErrorText = "فیصدي تر صفر مه کوئ او مه يې هم اضافه کوئ";
                 result = false;

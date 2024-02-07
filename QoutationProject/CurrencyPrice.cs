@@ -5,19 +5,21 @@ namespace QoutationProject
     public partial class CurrencyPrice : XtraForm
     {
         private readonly Actions.CurrencyPrices currencyPrices;
-        private int Id = 0;
+        private readonly DbSets.CurrencyPrice currency;
         public CurrencyPrice()
         {
             InitializeComponent();
             currencyPrices = new();
-            gridCurrency.DataSource = currencyPrices.GetCurrencyPrices;
+            currency = currencyPrices.GetLastCurrencyPrice;
+            TxtDollarToAfghani.Value = currency.AghaniPrice;
+            TxtDollarToKaldar.Value = currency.KaldarPrice;
+            TxtYenToDollar.Value = currency.DollarPrice;
         }
-
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (Valid())
             {
-                if (Id == 0)
+                if (currency == null)
                 {
                     DbSets.CurrencyPrice currencyPrice = new DbSets.CurrencyPrice()
                     {
@@ -30,7 +32,7 @@ namespace QoutationProject
                     if (added)
                     {
                         Defaults.MessageBox("عملیه تکمیل سوه");
-                        gridCurrency.DataSource = currencyPrices.GetCurrencyPrices;
+                        Close();
 
                     }
                     else
@@ -42,7 +44,7 @@ namespace QoutationProject
                 {
                     DbSets.CurrencyPrice currencyPrice = new DbSets.CurrencyPrice()
                     {
-                        Id = Id,
+                        Id = currency.Id,
                         AghaniPrice = TxtDollarToAfghani.Value,
                         KaldarPrice = TxtDollarToKaldar.Value,
                         DollarPrice = TxtYenToDollar.Value
@@ -51,7 +53,7 @@ namespace QoutationProject
                     if (update)
                     {
                         Defaults.MessageBox("عملیه تکمیل سوه");
-                        gridCurrency.DataSource = currencyPrices.GetCurrencyPrices;
+                        Close();
                     }
                     else
                     {
@@ -83,17 +85,6 @@ namespace QoutationProject
                 TxtDollarToKaldar.ErrorText = default!;
             }
             return result;
-        }
-        private void gridCurrency_DoubleClick(object sender, EventArgs e)
-        {
-            if (viewCurrency.SelectedRowsCount > 0)
-            {
-                DbSets.CurrencyPrice currency = (DbSets.CurrencyPrice)viewCurrency.GetFocusedRow();
-                Id = currency.Id;
-                TxtDollarToAfghani.Value = currency.AghaniPrice;
-                TxtDollarToKaldar.Value = currency.KaldarPrice;
-                TxtYenToDollar.Value = currency.DollarPrice;
-            }
         }
     }
 }

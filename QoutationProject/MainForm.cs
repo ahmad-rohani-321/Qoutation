@@ -1,6 +1,5 @@
 ﻿using DevExpress.Mvvm.Native;
 using DevExpress.XtraReports.UI;
-
 namespace QoutationProject
 {
     public partial class MainForm : DevExpress.XtraEditors.XtraForm
@@ -9,7 +8,6 @@ namespace QoutationProject
         {
             InitializeComponent();
         }
-
         private void btnNewItem_Click(object sender, EventArgs e)
         {
             using (Actions.CurrencyPrices currency = new())
@@ -29,7 +27,6 @@ namespace QoutationProject
                 }
             }
         }
-
         private void btnEditItem_Click(object sender, EventArgs e)
         {
             if (viewItems.SelectedRowsCount == 1)
@@ -43,23 +40,14 @@ namespace QoutationProject
                 gridItems.RefreshDataSource();
             }
         }
-
         private void btnEditPrice_Click(object sender, EventArgs e)
         {
             CurrencyPrice currencyPrice = new CurrencyPrice();
             currencyPrice.ShowDialog();
             currencyPrice.Dispose();
         }
-
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            /*SaveFileDialog fileDialog = new();
-            fileDialog.Filter = "Excel files (*.xlsx)|*.xlsx";
-            if (fileDialog.ShowDialog() == DialogResult.OK)
-            {
-                viewItems.ExportToXlsx(fileDialog.FileName);
-            }
-            fileDialog.Dispose();*/
             PrintItems print = new();
             print.DataSource = gridItems.DataSource;
             print.CreateDocument();
@@ -72,7 +60,6 @@ namespace QoutationProject
             Actions.Items item = new();
             gridItems.DataSource = item.GetItems;
         }
-
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (Defaults.YesNoMessageBox("غواړئ فورم بند کړئ") == DialogResult.Yes)
@@ -84,7 +71,6 @@ namespace QoutationProject
                 e.Cancel = true;
             }
         }
-
         private void btnResetDatabase_Click(object sender, EventArgs e)
         {
             ResetDatabase d = new ResetDatabase();
@@ -108,7 +94,6 @@ namespace QoutationProject
                 }
             }
         }
-
         private void btnRefreshPage_Click(object sender, EventArgs e)
         {
             Actions.Items item = new();

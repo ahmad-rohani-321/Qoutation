@@ -31,11 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ResetDatabase));
             btnBackUp = new DevExpress.XtraEditors.SimpleButton();
             btnRestore = new DevExpress.XtraEditors.SimpleButton();
+            btnDeleteDatabase = new DevExpress.XtraEditors.SimpleButton();
             SuspendLayout();
             // 
             // btnBackUp
             // 
-            btnBackUp.Location = new Point(103, 57);
+            btnBackUp.Location = new Point(107, 78);
             btnBackUp.Name = "btnBackUp";
             btnBackUp.Size = new Size(233, 36);
             btnBackUp.TabIndex = 0;
@@ -44,17 +45,27 @@
             // 
             // btnRestore
             // 
-            btnRestore.Location = new Point(103, 99);
+            btnRestore.Location = new Point(107, 138);
             btnRestore.Name = "btnRestore";
             btnRestore.Size = new Size(233, 36);
             btnRestore.TabIndex = 1;
-            btnRestore.Text = "ریسټور";
+            btnRestore.Text = "نوی ډاټابېس";
             btnRestore.Click += btnRestore_Click;
+            // 
+            // btnDeleteDatabase
+            // 
+            btnDeleteDatabase.Location = new Point(107, 198);
+            btnDeleteDatabase.Name = "btnDeleteDatabase";
+            btnDeleteDatabase.Size = new Size(233, 36);
+            btnDeleteDatabase.TabIndex = 1;
+            btnDeleteDatabase.Text = "ډیلیټ ډاټابېس";
+            btnDeleteDatabase.Click += btnDeleteDatabase_Click;
             // 
             // ResetDatabase
             // 
             AutoScaleMode = AutoScaleMode.None;
             ClientSize = new Size(447, 405);
+            Controls.Add(btnDeleteDatabase);
             Controls.Add(btnRestore);
             Controls.Add(btnBackUp);
             IconOptions.Icon = (Icon)resources.GetObject("ResetDatabase.IconOptions.Icon");
@@ -71,5 +82,6 @@
 
         private DevExpress.XtraEditors.SimpleButton btnBackUp;
         private DevExpress.XtraEditors.SimpleButton btnRestore;
+        private DevExpress.XtraEditors.SimpleButton btnDeleteDatabase;
     }
 }

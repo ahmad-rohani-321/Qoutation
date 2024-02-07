@@ -23,34 +23,42 @@ namespace QoutationProject
 
         private void btnBackUp_Click(object sender, EventArgs e)
         {
-            string path = @$"{Environment.CurrentDirectory}\Qoutation\Database.db";
-            string toPath = $@"{Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory)}\Database.db";
-            if (!File.Exists($@"{Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory)}\Database.db"))
+            SaveFileDialog fileDialog = new();
+            fileDialog.Filter = "Sqlite files (*.db)|*.db";
+            if (fileDialog.ShowDialog() == DialogResult.OK)
             {
-                File.Copy(path, toPath);
-                Defaults.MessageBox("فایل ډیسکټاپ ته کاپي سو");
+                string path = @$"{Environment.CurrentDirectory}\Qoutation\Database.db";
+                File.Copy(path, fileDialog.FileName);
+                Defaults.MessageBox("بک آپ ثبت سو");
+                Close();
             }
-            else
-            {
-                File.Delete(path);
-                File.Copy(path, toPath);
-                Defaults.MessageBox("فایل ډیسکټاپ ته کاپي سو");
-            }
+            fileDialog.Dispose();
         }
 
         private void btnRestore_Click(object sender, EventArgs e)
         {
             try
             {
-                string path = @$"Data Source = {Environment.CurrentDirectory}\Qoutation\Database.db";
                 MainDbContext db = new MainDbContext();
                 db.Database.CreateExecutionStrategy();
                 db.Database.Migrate();
+                Defaults.MessageBox("نوی ډاټابېس جوړ سو");
+                Close();
             }
-            catch 
-            {
+            catch { }
+        }
 
-                throw;
+        private void btnDeleteDatabase_Click(object sender, EventArgs e)
+        {
+            if (!File.Exists(@$"{Environment.CurrentDirectory}\Qoutation\Database.db"))
+            {
+                Defaults.MessageBox(message: "ډاټابېس ډیلیټ سوی دی");
+            }
+            else
+            {
+                File.Delete(@$"{Environment.CurrentDirectory}\Qoutation\Database.db");
+                Defaults.MessageBox(message: "ډاټابېس ډیلیټ سو");
+                Close();
             }
         }
     }

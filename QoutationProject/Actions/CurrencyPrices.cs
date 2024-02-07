@@ -18,12 +18,6 @@ namespace QoutationProject.Actions
                 db.CurrencyPrices.Add(currencyPrice);
                 if (db.Items.Count() > 0)
                 {
-
-                    /*db.Items.ExecuteUpdate(x => x
-                        .SetProperty(y => y.DollarPrice, d => decimal.Round((d.FinalPrice / currencyPrice.DollarPrice), 3))
-                        .SetProperty(y => y.AfghaniPrice, a => decimal.Round((a.DollarPrice * currencyPrice.AghaniPrice), 3))
-                        .SetProperty(y => y.KaldarPrice, k => decimal.Round((k.DollarPrice * currencyPrice.KaldarPrice), 3)));*/
-
                     foreach (var item in db.Items)
                     {
                         item.DollarPrice = decimal.Round(item.FinalPrice / currencyPrice.DollarPrice, 3);
@@ -95,11 +89,6 @@ namespace QoutationProject.Actions
                 price.DollarPrice = currency.DollarPrice;
                 price.AghaniPrice = currency.AghaniPrice;
                 price.KaldarPrice = currency.KaldarPrice;
-
-                /*db.Items.ExecuteUpdate(x => x
-                    .SetProperty(y => y.DollarPrice, d => decimal.Round((d.FinalPrice / price.DollarPrice), 3))
-                    .SetProperty(y => y.AfghaniPrice, a => decimal.Round((a.DollarPrice * price.AghaniPrice), 3))
-                    .SetProperty(y => y.KaldarPrice, k => decimal.Round((k.DollarPrice * price.KaldarPrice), 3)));*/
                 foreach (var item in db.Items)
                 {
                     item.DollarPrice = decimal.Round(item.FinalPrice / price.DollarPrice, 3);
