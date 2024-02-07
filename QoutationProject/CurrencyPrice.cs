@@ -11,9 +11,12 @@ namespace QoutationProject
             InitializeComponent();
             currencyPrices = new();
             currency = currencyPrices.GetLastCurrencyPrice;
-            TxtDollarToAfghani.Value = currency.AghaniPrice;
-            TxtDollarToKaldar.Value = currency.KaldarPrice;
-            TxtYenToDollar.Value = currency.DollarPrice;
+            if (currency != null)
+            {
+                TxtDollarToAfghani.Value = currency.AghaniPrice;
+                TxtDollarToKaldar.Value = currency.KaldarPrice;
+                TxtYenToDollar.Value = currency.DollarPrice;
+            }
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
