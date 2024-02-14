@@ -91,7 +91,10 @@ namespace QoutationProject.Actions
                 price.KaldarPrice = currency.KaldarPrice;
                 foreach (var item in db.Items)
                 {
-                    item.DollarPrice = decimal.Round(item.FinalPrice / price.DollarPrice, 3);
+                    if (item.FinalPrice > 0)
+                    {
+                        item.DollarPrice = decimal.Round(item.FinalPrice / price.DollarPrice, 3);
+                    }
                     item.AfghaniPrice = decimal.Round(item.DollarPrice * price.AghaniPrice, 3);
                     item.KaldarPrice = decimal.Round(item.DollarPrice * price.KaldarPrice, 3);
                 }

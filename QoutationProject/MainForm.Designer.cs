@@ -93,7 +93,7 @@
             layoutControl1.Name = "layoutControl1";
             layoutControl1.OptionsView.RightToLeftMirroringApplied = true;
             layoutControl1.Root = Root;
-            layoutControl1.Size = new Size(1358, 634);
+            layoutControl1.Size = new Size(1358, 632);
             layoutControl1.TabIndex = 0;
             layoutControl1.Text = "layoutControl1";
             // 
@@ -183,7 +183,7 @@
             gridItems.Location = new Point(16, 221);
             gridItems.MainView = viewItems;
             gridItems.Name = "gridItems";
-            gridItems.Size = new Size(1326, 397);
+            gridItems.Size = new Size(1326, 395);
             gridItems.TabIndex = 5;
             gridItems.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { viewItems });
             // 
@@ -280,7 +280,7 @@
             Root.GroupBordersVisible = false;
             Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { layoutControlItem1, layoutControlItem8, layoutControlItem2, layoutControlItem3, layoutControlItem4, layoutControlItem5, emptySpaceItem1, layoutControlItem6, layoutControlItem7, layoutControlItem9 });
             Root.Name = "Root";
-            Root.Size = new Size(1358, 634);
+            Root.Size = new Size(1358, 632);
             Root.TextVisible = false;
             // 
             // layoutControlItem1
@@ -288,7 +288,7 @@
             layoutControlItem1.Control = gridItems;
             layoutControlItem1.Location = new Point(0, 205);
             layoutControlItem1.Name = "layoutControlItem1";
-            layoutControlItem1.Size = new Size(1332, 403);
+            layoutControlItem1.Size = new Size(1332, 401);
             layoutControlItem1.TextSize = new Size(0, 0);
             layoutControlItem1.TextVisible = false;
             // 
@@ -378,7 +378,7 @@
             // 
             Appearance.Options.UseFont = true;
             AutoScaleMode = AutoScaleMode.None;
-            ClientSize = new Size(1358, 634);
+            ClientSize = new Size(1358, 632);
             Controls.Add(layoutControl1);
             Font = new Font("Calibri", 13.8F);
             IconOptions.Icon = (Icon)resources.GetObject("MainForm.IconOptions.Icon");

@@ -72,14 +72,14 @@
             layoutControl1.Name = "layoutControl1";
             layoutControl1.OptionsView.RightToLeftMirroringApplied = true;
             layoutControl1.Root = Root;
-            layoutControl1.Size = new Size(493, 314);
+            layoutControl1.Size = new Size(493, 304);
             layoutControl1.TabIndex = 0;
             layoutControl1.Text = "layoutControl1";
             // 
             // TxtYenToDollar
             // 
             TxtYenToDollar.EditValue = new decimal(new int[] { 0, 0, 0, 0 });
-            TxtYenToDollar.Location = new Point(16, 159);
+            TxtYenToDollar.Location = new Point(16, 157);
             TxtYenToDollar.Name = "TxtYenToDollar";
             TxtYenToDollar.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
             TxtYenToDollar.Size = new Size(373, 46);
@@ -89,7 +89,7 @@
             // TxtDollarToKaldar
             // 
             TxtDollarToKaldar.EditValue = new decimal(new int[] { 0, 0, 0, 0 });
-            TxtDollarToKaldar.Location = new Point(16, 97);
+            TxtDollarToKaldar.Location = new Point(16, 95);
             TxtDollarToKaldar.Name = "TxtDollarToKaldar";
             TxtDollarToKaldar.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
             TxtDollarToKaldar.Size = new Size(366, 46);
@@ -99,7 +99,7 @@
             // TxtDollarToAfghani
             // 
             TxtDollarToAfghani.EditValue = new decimal(new int[] { 0, 0, 0, 0 });
-            TxtDollarToAfghani.Location = new Point(16, 35);
+            TxtDollarToAfghani.Location = new Point(16, 33);
             TxtDollarToAfghani.Name = "TxtDollarToAfghani";
             TxtDollarToAfghani.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
             TxtDollarToAfghani.Size = new Size(361, 46);
@@ -108,7 +108,7 @@
             // 
             // btnSave
             // 
-            btnSave.Location = new Point(16, 225);
+            btnSave.Location = new Point(16, 222);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(461, 35);
             btnSave.StyleController = layoutControl1;
@@ -122,13 +122,13 @@
             Root.GroupBordersVisible = false;
             Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { layoutControlItem3, layoutControlItem1, layoutControlItem2, layoutControlItem5, emptySpaceItem1, emptySpaceItem2, emptySpaceItem3, emptySpaceItem4, emptySpaceItem5 });
             Root.Name = "Root";
-            Root.Size = new Size(493, 314);
+            Root.Size = new Size(493, 304);
             Root.TextVisible = false;
             // 
             // layoutControlItem3
             // 
             layoutControlItem3.Control = btnSave;
-            layoutControlItem3.Location = new Point(0, 209);
+            layoutControlItem3.Location = new Point(0, 206);
             layoutControlItem3.Name = "layoutControlItem3";
             layoutControlItem3.Size = new Size(467, 41);
             layoutControlItem3.TextSize = new Size(0, 0);
@@ -137,7 +137,7 @@
             // layoutControlItem1
             // 
             layoutControlItem1.Control = TxtDollarToAfghani;
-            layoutControlItem1.Location = new Point(0, 19);
+            layoutControlItem1.Location = new Point(0, 17);
             layoutControlItem1.Name = "layoutControlItem1";
             layoutControlItem1.Size = new Size(467, 52);
             layoutControlItem1.Text = "ډالر په افغانۍ";
@@ -148,7 +148,7 @@
             // layoutControlItem2
             // 
             layoutControlItem2.Control = TxtDollarToKaldar;
-            layoutControlItem2.Location = new Point(0, 81);
+            layoutControlItem2.Location = new Point(0, 79);
             layoutControlItem2.Name = "layoutControlItem2";
             layoutControlItem2.Size = new Size(467, 52);
             layoutControlItem2.Text = "ډالر په کلدار";
@@ -159,7 +159,7 @@
             // layoutControlItem5
             // 
             layoutControlItem5.Control = TxtYenToDollar;
-            layoutControlItem5.Location = new Point(0, 143);
+            layoutControlItem5.Location = new Point(0, 141);
             layoutControlItem5.Name = "layoutControlItem5";
             layoutControlItem5.Size = new Size(467, 52);
             layoutControlItem5.Text = "ډالر په ین";
@@ -168,15 +168,15 @@
             // emptySpaceItem1
             // 
             emptySpaceItem1.AllowHotTrack = false;
-            emptySpaceItem1.Location = new Point(0, 250);
+            emptySpaceItem1.Location = new Point(0, 247);
             emptySpaceItem1.Name = "emptySpaceItem1";
-            emptySpaceItem1.Size = new Size(467, 38);
+            emptySpaceItem1.Size = new Size(467, 31);
             emptySpaceItem1.TextSize = new Size(0, 0);
             // 
             // emptySpaceItem2
             // 
             emptySpaceItem2.AllowHotTrack = false;
-            emptySpaceItem2.Location = new Point(0, 71);
+            emptySpaceItem2.Location = new Point(0, 69);
             emptySpaceItem2.Name = "emptySpaceItem2";
             emptySpaceItem2.Size = new Size(467, 10);
             emptySpaceItem2.TextSize = new Size(0, 0);
@@ -184,7 +184,7 @@
             // emptySpaceItem3
             // 
             emptySpaceItem3.AllowHotTrack = false;
-            emptySpaceItem3.Location = new Point(0, 133);
+            emptySpaceItem3.Location = new Point(0, 131);
             emptySpaceItem3.Name = "emptySpaceItem3";
             emptySpaceItem3.Size = new Size(467, 10);
             emptySpaceItem3.TextSize = new Size(0, 0);
@@ -192,9 +192,9 @@
             // emptySpaceItem4
             // 
             emptySpaceItem4.AllowHotTrack = false;
-            emptySpaceItem4.Location = new Point(0, 195);
+            emptySpaceItem4.Location = new Point(0, 193);
             emptySpaceItem4.Name = "emptySpaceItem4";
-            emptySpaceItem4.Size = new Size(467, 14);
+            emptySpaceItem4.Size = new Size(467, 13);
             emptySpaceItem4.TextSize = new Size(0, 0);
             // 
             // emptySpaceItem5
@@ -202,14 +202,14 @@
             emptySpaceItem5.AllowHotTrack = false;
             emptySpaceItem5.Location = new Point(0, 0);
             emptySpaceItem5.Name = "emptySpaceItem5";
-            emptySpaceItem5.Size = new Size(467, 19);
+            emptySpaceItem5.Size = new Size(467, 17);
             emptySpaceItem5.TextSize = new Size(0, 0);
             // 
             // CurrencyPrice
             // 
             Appearance.Options.UseFont = true;
             AutoScaleMode = AutoScaleMode.None;
-            ClientSize = new Size(493, 314);
+            ClientSize = new Size(493, 304);
             Controls.Add(layoutControl1);
             Font = new Font("Calibri", 12F);
             FormBorderStyle = FormBorderStyle.FixedSingle;
